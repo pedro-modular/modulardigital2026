@@ -1,0 +1,34 @@
+{
+  "industries": [
+    {
+      "slug": "escolas",
+      "name": "Escolas e Instituições de Ensino",
+      "keywords": ["educação", "escolas", "universidades", "formação"],
+      "description": "Soluções digitais especializadas para o setor educativo."
+    },
+    {
+      "slug": "saude",
+      "name": "Saúde e Clínicas",
+      "keywords": ["saúde", "clínicas", "hospitais", "médicos"],
+      "description": "Plataformas digitais para organizações de saúde."
+    },
+    {
+      "slug": "setor-publico",
+      "name": "Setor Público e Autarquias",
+      "keywords": ["câmaras", "governo", "autarquias", "juntas de freguesia"],
+      "description": "Soluções digitais para organizações do setor público."
+    },
+    {
+      "slug": "ipss",
+      "name": "IPSS e Misericórdias",
+      "keywords": ["IPSS", "misericórdias", "solidariedade", "terceiro setor"],
+      "description": "Apoio digital para instituições de solidariedade social."
+    },
+    {
+      "slug": "b2b",
+      "name": "Empresas B2B",
+      "keywords": ["B2B", "empresas", "negócios", "corporativo"],
+      "description": "Soluções digitais para empresas B2B e corporativas."
+    }
+  ]
+}

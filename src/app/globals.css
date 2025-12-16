@@ -1,26 +1,489 @@
 @import "tailwindcss";
 
+/* ══════════════════════════════════════════════════════════════════════════
+   MODULAR DIGITAL — Editorial Industrial Design System
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Lufga Font - Display/Headings */
+@font-face {
+  font-family: 'Lufga';
+  src: url('/fonts/Lufga-Regular.woff2') format('woff2'),
+       url('/fonts/Lufga-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('/fonts/Lufga-Medium.woff2') format('woff2'),
+       url('/fonts/Lufga-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('/fonts/Lufga-SemiBold.woff2') format('woff2'),
+       url('/fonts/Lufga-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('/fonts/Lufga-Bold.woff2') format('woff2'),
+       url('/fonts/Lufga-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CSS Variables
+   ══════════════════════════════════════════════════════════════════════════ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core palette */
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-hover: #000000;
+  --accent: #e72f3f;
+  --accent-hover: #c9283a;
+  --muted: #737373;
+  --muted-bg: #f0f0f0;
+  --border: #e5e5e5;
+
+  /* Extended palette */
+  --cream: #f5f3f0;
+  --charcoal: #2d2d2d;
+  --warm-gray: #8a8a8a;
+
+  /* Typography */
+  --font-lufga: 'Lufga', 'Helvetica Neue', sans-serif;
+  --font-body: 'Helvetica Neue', -apple-system, sans-serif;
+
+  /* Spacing rhythm */
+  --space-unit: 8px;
+
+  /* Animation timing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-lufga);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ══════════════════════════════════════════════════════════════════════════
+   Base Styles
+   ══════════════════════════════════════════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use Lufga */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lufga);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Texture & Atmosphere
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Noise texture overlay */
+.grain {
+  position: relative;
+}
+
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gradient mesh background */
+.mesh-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(231, 47, 63, 0.08), transparent),
+    radial-gradient(ellipse 60% 60% at 80% 20%, rgba(231, 47, 63, 0.05), transparent),
+    radial-gradient(ellipse 50% 80% at 60% 80%, rgba(26, 26, 26, 0.03), transparent);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Animation Keyframes
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-text {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes line-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Animation Utilities
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.animate-fade-in {
+  animation: fade-in 0.8s var(--ease-out-expo) forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s var(--ease-out-expo) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s var(--ease-out-expo) forwards;
+}
+
+.animate-reveal-text {
+  animation: reveal-text 1.2s var(--ease-out-expo) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.8s var(--ease-out-expo) forwards;
+}
+
+.animate-line-grow {
+  animation: line-grow 1.2s var(--ease-out-expo) forwards;
+  transform-origin: left;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* Initial state for animated elements */
+.will-animate {
+  opacity: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Interactive States
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Magnetic hover effect for buttons */
+.magnetic {
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.magnetic:hover {
+  transform: scale(1.02);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Card hover lift */
+.hover-lift {
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Image reveal on hover */
+.image-reveal {
+  overflow: hidden;
+}
+
+.image-reveal img {
+  transition: transform 0.8s var(--ease-out-expo);
+}
+
+.image-reveal:hover img {
+  transform: scale(1.05);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Typography Utilities
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Display heading - massive, impactful */
+.text-display {
+  font-family: var(--font-lufga);
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+/* Headline */
+.text-headline {
+  font-family: var(--font-lufga);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* Subheading with accent */
+.text-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Large body text */
+.text-body-large {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Layout Utilities
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Asymmetric container */
+.container-asymmetric {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 5vw, 6rem);
+  padding-right: clamp(1.5rem, 5vw, 3rem);
+}
+
+/* Offset grid for visual interest */
+.offset-left {
+  margin-left: -5%;
+}
+
+.offset-right {
+  margin-right: -5%;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Decorative Elements
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Accent line */
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+}
+
+/* Decorative dot */
+.dot-accent {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* Corner accent */
+.corner-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-left: 2px solid var(--accent);
+  border-top: 2px solid var(--accent);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Prose Styles for MDX
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.prose {
+  @apply max-w-none;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+  font-family: var(--font-lufga);
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mt-6 mb-3;
+  font-family: var(--font-lufga);
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-4;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-[#e72f3f] hover:underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-[#e72f3f] pl-4 italic my-4;
+}
+
+.prose code {
+  @apply bg-zinc-100 px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-zinc-900 text-zinc-100 p-4 rounded-lg overflow-x-auto my-4;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Scrollbar Styling
+   ══════════════════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
 }

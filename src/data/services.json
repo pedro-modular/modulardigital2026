@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "slug": "web-design",
+      "name": "Web Design",
+      "keywords": ["design web", "website", "interface", "UX", "UI"],
+      "description": "Criamos websites modernos, responsivos e otimizados para conversão."
+    },
+    {
+      "slug": "desenvolvimento-web",
+      "name": "Desenvolvimento Web",
+      "keywords": ["programação", "desenvolvimento", "código", "aplicações web"],
+      "description": "Desenvolvemos soluções web personalizadas com tecnologias modernas."
+    },
+    {
+      "slug": "crm",
+      "name": "CRM",
+      "keywords": ["gestão clientes", "relacionamento", "vendas", "leads"],
+      "description": "Implementamos sistemas CRM para otimizar a gestão de clientes e vendas."
+    },
+    {
+      "slug": "seo",
+      "name": "SEO",
+      "keywords": ["otimização", "google", "posicionamento", "pesquisa"],
+      "description": "Melhoramos o posicionamento do seu site nos motores de pesquisa."
+    },
+    {
+      "slug": "consultoria-digital",
+      "name": "Consultoria Digital",
+      "keywords": ["estratégia", "transformação digital", "consultoria"],
+      "description": "Ajudamos na transformação digital da sua organização."
+    },
+    {
+      "slug": "ecommerce",
+      "name": "E-commerce",
+      "keywords": ["loja online", "vendas online", "shopify", "woocommerce"],
+      "description": "Criamos lojas online otimizadas para vendas e conversão."
+    },
+    {
+      "slug": "gestao-eventos",
+      "name": "Gestão de Eventos",
+      "keywords": ["eventos", "conferências", "inscrições", "plataforma"],
+      "description": "Plataformas digitais para gestão completa de eventos institucionais."
+    },
+    {
+      "slug": "acessibilidade-web",
+      "name": "Acessibilidade Web",
+      "keywords": ["WCAG", "acessibilidade", "inclusão", "conformidade"],
+      "description": "Garantimos que o seu site é acessível a todos os utilizadores."
+    }
+  ]
+}
