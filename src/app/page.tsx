@@ -345,14 +345,28 @@ export default function Home() {
                     className="group hover-lift rounded-2xl border border-[#e5e5e5] bg-white overflow-hidden"
                   >
                     {caseStudy.featured_image && (
-                      <div className="aspect-video overflow-hidden bg-[#f8f9fa]">
-                        <Image
-                          src={caseStudy.featured_image}
-                          alt={caseStudy.title}
-                          width={400}
-                          height={225}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                        />
+                      <div className="aspect-[4/3] overflow-hidden relative">
+                        {/* Blurred background layer */}
+                        <div className="absolute inset-0">
+                          <Image
+                            src={caseStudy.featured_image}
+                            alt=""
+                            fill
+                            className="object-cover scale-110 blur-2xl opacity-40"
+                            aria-hidden="true"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-b from-[#f8f9fa]/80 to-[#f8f9fa]/95" />
+                        </div>
+                        {/* Main image - contained, not cropped */}
+                        <div className="absolute inset-0 flex items-center justify-center p-6">
+                          <Image
+                            src={caseStudy.featured_image}
+                            alt={caseStudy.title}
+                            width={400}
+                            height={300}
+                            className="max-h-full max-w-full object-contain transition-transform group-hover:scale-105 drop-shadow-lg"
+                          />
+                        </div>
                       </div>
                     )}
                     <div className="p-6">
