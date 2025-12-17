@@ -104,7 +104,7 @@ export function Footer() {
             {/* Social Links */}
             <div className="mt-8 flex gap-4">
               <a
-                href="https://www.linkedin.com/company/modulardigital"
+                href="https://www.linkedin.com/company/modulardigitalagency/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-umami-event="social_click"
@@ -117,7 +117,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/modulardigital"
+                href="https://www.facebook.com/modulardigitalagency"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-umami-event="social_click"
