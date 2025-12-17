@@ -9,6 +9,13 @@ const footerLinks = {
     { label: 'E-commerce', href: '/servicos/ecommerce' },
     { label: 'SEO', href: '/servicos/seo' },
   ],
+  produtos: [
+    { label: 'ZappExpense', href: '/produtos/zappexpense' },
+    { label: 'ZappService', href: '/produtos/zappservice' },
+    { label: 'ZappPropostas', href: '/produtos/zapppropostas' },
+    { label: 'ZappInscrições', href: '/produtos/zappinscricoes' },
+    { label: 'Ver Todos →', href: '/produtos' },
+  ],
   industrias: [
     { label: 'Instituições de Ensino', href: '/industrias/escolas' },
     { label: 'Organizações de Saúde', href: '/industrias/saude' },
@@ -133,12 +140,29 @@ export function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-9 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-9 lg:grid-cols-6">
             {/* Serviços */}
             <div>
               <h3 className="text-xs font-bold uppercase tracking-widest text-white/40">Serviços</h3>
               <ul className="mt-6 space-y-4">
                 {footerLinks.servicos.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/70 transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Produtos */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-white/40">Produtos</h3>
+              <ul className="mt-6 space-y-4">
+                {footerLinks.produtos.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

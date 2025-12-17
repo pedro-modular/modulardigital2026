@@ -1,0 +1,637 @@
+[
+  {
+    "slug": "zappexpense",
+    "name": "ZappExpense",
+    "tagline": "Deixe de se perguntar para onde foi o dinheiro",
+    "headline": "O seu dinheiro, finalmente sob controlo",
+    "description": "Aplicação de orçamento pessoal com categorias digitais (envelopes) e digitalização inteligente de recibos. Organize as suas finanças sem complicações.",
+    "longDescription": "O ZappExpense utiliza inteligência artificial para transformar a forma como gere o seu dinheiro. Com o sistema de envelopes digitais, distribua o seu orçamento por categorias personalizadas. A digitalização automática de recibos extrai comerciante, valor e data instantaneamente, enquanto a análise de padrões de consumo oferece recomendações personalizadas para poupar mais.",
+    "category": "Finanças Pessoais",
+    "audience": "Particulares",
+    "audienceDescription": "Jovens profissionais e particulares que procuram uma forma simples de controlar despesas sem folhas de cálculo complexas.",
+    "externalUrl": "https://zappexpense.com/",
+    "screenshot": "/uploads/products/zappexpense-screenshot.png",
+    "ctaText": "Começar Grátis",
+    "ctaSecondary": "Ver Preços",
+    "icon": "wallet",
+    "problem": {
+      "title": "O problema que todos conhecemos",
+      "description": "Chegamos ao fim do mês e perguntamos: \"Para onde foi o meu dinheiro?\" Tentamos folhas de cálculo, apps complicadas, até cadernos físicos. Nada funciona porque exige demasiado esforço. Resultado? Desistimos ao fim de duas semanas e voltamos a viver no escuro financeiro.",
+      "painPoints": [
+        "Gastos invisíveis que se acumulam sem percebermos",
+        "Surpresas desagradáveis quando chega o extrato bancário",
+        "Subscrições esquecidas que drenam a conta todos os meses",
+        "Incapacidade de poupar porque não sabemos quanto sobra"
+      ]
+    },
+    "solution": {
+      "title": "Uma abordagem diferente: Envelopes Digitais",
+      "description": "O método dos envelopes existe há décadas - a tua avó provavelmente usava. Funciona porque é visual e simples: dinheiro separado por categoria, quando acaba, acabou. O ZappExpense digitaliza este sistema comprovado e adiciona inteligência artificial para tornar tudo automático."
+    },
+    "benefits": [
+      {
+        "title": "Visibilidade Total",
+        "description": "Veja exatamente quanto gastou em cada categoria, a qualquer momento. Sem surpresas, sem \"acho que gastei mais ou menos isto\"."
+      },
+      {
+        "title": "Zero Esforço Manual",
+        "description": "Tire foto ao recibo e a IA extrai tudo automaticamente. Comerciante, valor, data, categoria - tudo preenchido em segundos."
+      },
+      {
+        "title": "Alertas Inteligentes",
+        "description": "Receba notificações quando estiver perto do limite de uma categoria. Nunca mais ultrapasse o orçamento sem querer."
+      },
+      {
+        "title": "Padrões Revelados",
+        "description": "A IA analisa os seus gastos e encontra padrões que lhe escapam. Aquele café diário? São 90€ por mês."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Jovens Profissionais",
+        "description": "Acabaste de começar a trabalhar e queres criar bons hábitos financeiros. O ZappExpense ajuda-te a poupar para objetivos concretos: viagem, carro, entrada para casa."
+      },
+      {
+        "title": "Famílias",
+        "description": "Gerir o orçamento familiar é complexo. Com envelopes partilhados, todos na família sabem quanto resta para supermercado, lazer ou despesas dos miúdos."
+      },
+      {
+        "title": "Freelancers",
+        "description": "Rendimento irregular exige controlo apertado. Separa despesas pessoais e profissionais, guarda para impostos, e nunca fiques sem almofada financeira."
+      }
+    ],
+    "howItWorks": [
+      {
+        "step": "1",
+        "title": "Cria os teus Envelopes",
+        "description": "Define categorias como Alimentação, Transportes, Lazer, Poupança. Atribui um valor mensal a cada uma."
+      },
+      {
+        "step": "2",
+        "title": "Regista Despesas",
+        "description": "Manualmente em 3 segundos, ou tira foto ao recibo e deixa a IA fazer o resto."
+      },
+      {
+        "step": "3",
+        "title": "Acompanha em Tempo Real",
+        "description": "Vê quanto resta em cada envelope. Gráficos mostram a evolução ao longo do mês."
+      },
+      {
+        "step": "4",
+        "title": "Recebe Insights",
+        "description": "A IA analisa padrões e sugere onde podes cortar ou onde estás a gastar bem."
+      }
+    ],
+    "comparison": {
+      "title": "Porquê ZappExpense vs Outras Apps?",
+      "points": [
+        {
+          "vs": "Folhas de Cálculo",
+          "advantage": "Automação por IA elimina entrada manual. Acesso móvel instantâneo."
+        },
+        {
+          "vs": "Apps bancárias",
+          "advantage": "Orçamentação proativa em vez de apenas mostrar o que já gastou."
+        },
+        {
+          "vs": "YNAB / Mint",
+          "advantage": "Interface em português, suporte local, preço justo para o mercado PT."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Preciso de ligar a minha conta bancária?",
+        "answer": "Não é obrigatório. Podes registar despesas manualmente ou por foto de recibo. A ligação bancária é opcional e usamos encriptação de nível bancário."
+      },
+      {
+        "question": "Funciona para casais ou famílias?",
+        "answer": "Sim! No plano Premium podes partilhar envelopes com até 5 dispositivos e ver gastos de todos os membros."
+      },
+      {
+        "question": "E se ultrapassar o limite de um envelope?",
+        "answer": "Recebes um alerta, mas não és bloqueado. Podes transferir saldo de outro envelope ou simplesmente ter consciência de que ultrapassaste."
+      },
+      {
+        "question": "Os meus dados financeiros estão seguros?",
+        "answer": "Absolutamente. Usamos encriptação AES-256, servidores na UE, e nunca vendemos dados a terceiros. Cumprimos RGPD."
+      }
+    ],
+    "features": [
+      {
+        "title": "Envelopes Digitais",
+        "description": "Categorias personalizadas para distribuir o seu orçamento mensal"
+      },
+      {
+        "title": "Digitalização IA de Recibos",
+        "description": "Extraia automaticamente comerciante, valor e data de qualquer recibo"
+      },
+      {
+        "title": "Análise de Padrões",
+        "description": "Insights sobre os seus hábitos de consumo com recomendações personalizadas"
+      },
+      {
+        "title": "Deteção de Subscrições",
+        "description": "Identifique automaticamente cobranças recorrentes e evite surpresas"
+      }
+    ],
+    "pricing": {
+      "type": "freemium",
+      "free": "15 envelopes, histórico 12 meses",
+      "premium": "10€/mês - Ilimitado + IA"
+    },
+    "testimonial": {
+      "quote": "Finalmente consegui poupar para a minha viagem de sonho. Em 8 meses juntei 2.000€ sem sentir que estava a fazer sacrifícios.",
+      "author": "Mariana S.",
+      "role": "Designer, Lisboa"
+    }
+  },
+  {
+    "slug": "zappservice",
+    "name": "ZappService",
+    "tagline": "Coordene a sua equipa de terreno sem telefonemas",
+    "headline": "Gestão de equipas técnicas sem caos",
+    "description": "Plataforma de gestão para equipas técnicas com calendário visual, app móvel offline, e relatórios por voz convertidos em PDF profissional automaticamente.",
+    "longDescription": "O ZappService elimina a coordenação por WhatsApp e folhas de cálculo desatualizadas. Com um calendário visual drag-and-drop, distribua tarefas pela equipa e veja a disponibilidade de todos. Os técnicos acedem às suas tarefas diárias na app móvel (funciona offline) e criam relatórios profissionais simplesmente falando - a IA converte voz em PDF com a marca da sua empresa.",
+    "category": "Gestão de Equipas",
+    "audience": "PMEs de Serviços Técnicos",
+    "audienceDescription": "Empresas de serviços técnicos como eletricistas, manutenção industrial, inspeções e assistência técnica com equipas no terreno.",
+    "externalUrl": "https://zappservice.app/pt",
+    "screenshot": "/uploads/products/zappservice-screenshot.png",
+    "ctaText": "Experimentar 14 Dias",
+    "ctaSecondary": "Ver Demonstração",
+    "icon": "clipboard",
+    "problem": {
+      "title": "O caos diário de gerir equipas no terreno",
+      "description": "São 7h30 da manhã. O telefone não para. \"Onde é o serviço de hoje?\" \"O cliente mudou a hora.\" \"Preciso da ficha técnica.\" Passa o dia a fazer de central telefónica em vez de gerir o negócio. Os relatórios? Chegam dias depois, incompletos, ilegíveis. O cliente reclama que não recebeu nada.",
+      "painPoints": [
+        "Coordenação por WhatsApp é caótica - mensagens perdem-se",
+        "Técnicos ligam constantemente para tirar dúvidas básicas",
+        "Relatórios demoram dias e chegam incompletos ou ilegíveis",
+        "Impossível saber em tempo real onde está cada técnico",
+        "Clientes reclamam por falta de documentação profissional"
+      ]
+    },
+    "solution": {
+      "title": "Uma central de comando para a sua operação",
+      "description": "Imagine ver toda a sua equipa num calendário visual. Arrastar tarefas entre técnicos. Os técnicos abrem a app e têm tudo: morada, contacto do cliente, histórico, peças necessárias. No final, falam para o telemóvel e o relatório aparece em PDF, com a sua marca, pronto a enviar ao cliente. Isto é o ZappService."
+    },
+    "benefits": [
+      {
+        "title": "Fim das Chamadas Constantes",
+        "description": "Toda a informação está na app. Morada, contacto, instruções, histórico. Os técnicos consultam em vez de ligar."
+      },
+      {
+        "title": "Relatórios em 3 Minutos",
+        "description": "O técnico grava uma nota de voz. A IA transcreve, formata, adiciona a sua marca, e gera PDF. Pronto a enviar."
+      },
+      {
+        "title": "Visibilidade Total",
+        "description": "Saiba onde está cada técnico, que serviços estão concluídos, quais estão atrasados. Tudo num dashboard."
+      },
+      {
+        "title": "Clientes Impressionados",
+        "description": "Relatórios profissionais entregues no próprio dia. Diferencia-se da concorrência pela organização."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Empresas de Manutenção AVAC",
+        "description": "Manutenções preventivas agendadas, fichas técnicas de cada equipamento acessíveis na app, relatórios com medições e fotografias."
+      },
+      {
+        "title": "Eletricistas e Canalizadores",
+        "description": "Orçamentos no local convertidos em serviço agendado. Histórico de intervenções por cliente. Faturas geradas automaticamente."
+      },
+      {
+        "title": "Empresas de Inspeções",
+        "description": "Checklists digitais, fotografias obrigatórias, relatórios PDF conformes às normas. Tudo auditável e rastreável."
+      },
+      {
+        "title": "Assistência Técnica",
+        "description": "Gestão de tickets, peças de substituição, tempos de resposta. SLAs monitorizados automaticamente."
+      }
+    ],
+    "howItWorks": [
+      {
+        "step": "1",
+        "title": "Planeie no Calendário",
+        "description": "Arraste serviços para o técnico certo. Veja disponibilidade, competências, localização geográfica."
+      },
+      {
+        "step": "2",
+        "title": "Técnicos Recebem na App",
+        "description": "Notificação instantânea. Toda a info necessária: cliente, morada, histórico, peças, instruções."
+      },
+      {
+        "step": "3",
+        "title": "Execução com Registo",
+        "description": "Check-in no local, fotos, notas. Funciona offline - sincroniza quando houver rede."
+      },
+      {
+        "step": "4",
+        "title": "Relatório por Voz",
+        "description": "O técnico descreve o que fez. IA transcreve e formata. PDF profissional em segundos."
+      },
+      {
+        "step": "5",
+        "title": "Entrega ao Cliente",
+        "description": "Um clique e o relatório vai por email. Com a sua marca, profissional, no próprio dia."
+      }
+    ],
+    "comparison": {
+      "title": "ZappService vs Alternativas",
+      "points": [
+        {
+          "vs": "WhatsApp + Excel",
+          "advantage": "Informação centralizada, pesquisável, não se perde. Relatórios automáticos em vez de manuais."
+        },
+        {
+          "vs": "ERPs Pesados",
+          "advantage": "Implementação em dias, não meses. Interface simples que os técnicos realmente usam."
+        },
+        {
+          "vs": "Software Internacional",
+          "advantage": "Suporte em português, adaptado à realidade de PMEs portuguesas, preço acessível."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "A app funciona sem internet?",
+        "answer": "Sim. Os técnicos podem ver tarefas, registar trabalho, tirar fotos, tudo offline. Sincroniza automaticamente quando recuperar ligação."
+      },
+      {
+        "question": "Quanto tempo demora a implementar?",
+        "answer": "A maioria das empresas está operacional em 2-3 dias. Importamos os seus clientes, configuramos os técnicos, e damos formação por videochamada."
+      },
+      {
+        "question": "Posso personalizar os relatórios?",
+        "answer": "Completamente. O seu logótipo, cores, campos específicos do seu setor. Criamos templates à medida."
+      },
+      {
+        "question": "Integra com o software de faturação?",
+        "answer": "Sim, integramos com os principais sistemas portugueses. Serviços concluídos podem gerar faturas automaticamente."
+      },
+      {
+        "question": "Quantos técnicos posso ter?",
+        "answer": "Não há limite. O preço escala com o número de utilizadores, mas de forma justa para PMEs."
+      }
+    ],
+    "features": [
+      {
+        "title": "Calendário Visual",
+        "description": "Planeamento drag-and-drop com vista de disponibilidade da equipa"
+      },
+      {
+        "title": "Relatórios por Voz",
+        "description": "Grave notas de voz e converta automaticamente em PDF profissional com a sua marca"
+      },
+      {
+        "title": "App Móvel Offline",
+        "description": "Técnicos acedem a tarefas, moradas e instruções mesmo sem internet"
+      },
+      {
+        "title": "Notificações em Tempo Real",
+        "description": "Atualizações instantâneas que substituem telefonemas e mensagens"
+      }
+    ],
+    "pricing": {
+      "type": "trial",
+      "trial": "14 dias grátis",
+      "note": "Sem cartão de crédito"
+    },
+    "testimonial": {
+      "quote": "Passámos de 2 horas por dia ao telefone a coordenar para 15 minutos a planear no calendário. Os relatórios que demoravam dias agora saem no próprio dia.",
+      "author": "Carlos M.",
+      "role": "Gerente, Empresa de AVAC no Porto"
+    }
+  },
+  {
+    "slug": "zapppropostas",
+    "name": "ZappPropostas",
+    "tagline": "O seu pipeline comercial sob controlo total",
+    "headline": "CRM e propostas com os seus dados sob o seu teto",
+    "description": "Sistema de CRM e gestão de propostas com instalação on-premise ou cloud privada. Construtor de propostas, pipeline Kanban, analytics em tempo real.",
+    "longDescription": "O ZappPropostas oferece controlo total sobre os seus dados comerciais com instalação nos seus próprios servidores ou cloud privada em Portugal. Crie propostas profissionais com templates personalizados e biblioteca de produtos. Acompanhe negócios no pipeline visual Kanban e analise métricas de receita e desempenho da equipa comercial em tempo real.",
+    "category": "CRM & Vendas",
+    "audience": "Empresas Médias/Grandes",
+    "audienceDescription": "Empresas com equipas comerciais que necessitam de controlo total sobre dados sensíveis e conformidade RGPD com servidores em Portugal.",
+    "externalUrl": "https://zapppropostas.modulardigital.pt/",
+    "screenshot": "/uploads/products/zapppropostas-screenshot.png",
+    "ctaText": "Pedir Demonstração",
+    "ctaSecondary": "Ver Funcionalidades",
+    "icon": "document",
+    "problem": {
+      "title": "Dados comerciais sensíveis em mãos alheias",
+      "description": "A sua lista de clientes, histórico de negócios, margens, estratégias de preço - tudo está num CRM americano, em servidores que não controla, sujeito a leis de outros países. Se o fornecedor decidir aumentar preços 300%, o que faz? Se for comprado e descontinuado? Os seus dados comerciais são o ativo mais valioso da empresa. Porquê entregá-los a terceiros?",
+      "painPoints": [
+        "Dados sensíveis em servidores fora da UE, sem controlo",
+        "Dependência de fornecedores que podem mudar preços ou condições",
+        "Conformidade RGPD questionável com dados em jurisdições estrangeiras",
+        "Impossibilidade de auditar ou personalizar profundamente",
+        "Custos crescentes por utilizador que escalam descontroladamente"
+      ]
+    },
+    "solution": {
+      "title": "O seu CRM, nos seus servidores",
+      "description": "O ZappPropostas instala-se na sua infraestrutura - servidores próprios ou cloud privada em Portugal. Os dados nunca saem do seu controlo. Atualiza quando quiser, personaliza como precisar, integra com os seus sistemas. Paga uma licença, não por utilizador. Autonomia total."
+    },
+    "benefits": [
+      {
+        "title": "Soberania de Dados",
+        "description": "Os seus dados comerciais ficam nos seus servidores, em Portugal, sob a sua jurisdição e controlo total."
+      },
+      {
+        "title": "Custo Previsível",
+        "description": "Licença fixa anual, utilizadores ilimitados. Cresça a equipa comercial sem custos adicionais por pessoa."
+      },
+      {
+        "title": "Personalização Total",
+        "description": "Acesso ao código permite adaptações profundas. Integre com ERP, BI, ou qualquer sistema interno."
+      },
+      {
+        "title": "Conformidade Garantida",
+        "description": "RGPD nativo. Dados em Portugal. Auditorias facilitadas. Certificações simplificadas."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Empresas com Requisitos de Compliance",
+        "description": "Setores regulados (financeiro, saúde, público) que exigem dados em território nacional e auditabilidade completa."
+      },
+      {
+        "title": "Organizações com Equipas Comerciais Grandes",
+        "description": "Mais de 20 comerciais? O modelo por utilizador de CRMs SaaS torna-se proibitivo. Licença fixa resolve."
+      },
+      {
+        "title": "Empresas com Processos Comerciais Únicos",
+        "description": "Ciclos de venda complexos, aprovações multi-nível, integrações específicas - personalização profunda necessária."
+      },
+      {
+        "title": "Grupos Empresariais",
+        "description": "Múltiplas empresas, dados segregados mas reporting consolidado. Uma instalação, múltiplas instâncias."
+      }
+    ],
+    "howItWorks": [
+      {
+        "step": "1",
+        "title": "Instalação",
+        "description": "Instalamos nos seus servidores ou configuramos cloud privada em datacenter português."
+      },
+      {
+        "step": "2",
+        "title": "Configuração",
+        "description": "Personalizamos campos, workflows, templates de propostas, integrações com os seus sistemas."
+      },
+      {
+        "step": "3",
+        "title": "Migração",
+        "description": "Importamos dados do CRM atual, clientes, histórico, propostas. Sem perda de informação."
+      },
+      {
+        "step": "4",
+        "title": "Formação",
+        "description": "Formação presencial ou remota para equipa comercial e administradores."
+      },
+      {
+        "step": "5",
+        "title": "Suporte Contínuo",
+        "description": "Manutenção, atualizações de segurança, suporte técnico em português."
+      }
+    ],
+    "comparison": {
+      "title": "ZappPropostas vs CRMs SaaS",
+      "points": [
+        {
+          "vs": "Salesforce / HubSpot",
+          "advantage": "Dados em Portugal, custo fixo (não por utilizador), personalização ilimitada, sem dependência de roadmap externo."
+        },
+        {
+          "vs": "Pipedrive / Zoho",
+          "advantage": "Instalação on-premise disponível, conformidade RGPD garantida, suporte em português europeu."
+        },
+        {
+          "vs": "Desenvolvimento Custom",
+          "advantage": "Produto maduro e testado, implementação em semanas não meses, custo muito inferior."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Que infraestrutura preciso?",
+        "answer": "Um servidor Linux (físico ou VM) com 4GB RAM mínimo. Podemos instalar na sua infraestrutura existente ou recomendar cloud providers portugueses."
+      },
+      {
+        "question": "Quanto tempo demora a implementação?",
+        "answer": "Implementação standard: 2-4 semanas. Com personalizações complexas ou migrações grandes: 4-8 semanas."
+      },
+      {
+        "question": "Posso migrar do meu CRM atual?",
+        "answer": "Sim. Temos ferramentas de migração para Salesforce, HubSpot, Pipedrive, Excel, e outros. Histórico completo é preservado."
+      },
+      {
+        "question": "Como funcionam as atualizações?",
+        "answer": "Lançamos atualizações trimestrais. Você decide quando aplicar. Não há atualizações forçadas que mudem a interface sem aviso."
+      },
+      {
+        "question": "E se precisar de uma funcionalidade específica?",
+        "answer": "Desenvolvemos à medida. Como tem acesso ao código, personalizações integram-se nativamente no produto."
+      }
+    ],
+    "features": [
+      {
+        "title": "Construtor de Propostas",
+        "description": "Templates personalizados, biblioteca de produtos e exportação PDF automática"
+      },
+      {
+        "title": "Pipeline Visual Kanban",
+        "description": "Fases configuráveis para acompanhar cada negócio do início ao fecho"
+      },
+      {
+        "title": "Analytics em Tempo Real",
+        "description": "Métricas de receita, taxa de conversão e desempenho por comercial"
+      },
+      {
+        "title": "100% Controlo de Dados",
+        "description": "Instalação on-premise ou cloud privada com servidores em Portugal"
+      }
+    ],
+    "pricing": {
+      "type": "license",
+      "note": "Licença + manutenção anual",
+      "highlight": "Utilizadores ilimitados"
+    },
+    "testimonial": {
+      "quote": "Saímos do Salesforce e poupamos 40.000€ por ano. Mais importante: os nossos dados de clientes estão finalmente sob o nosso controlo.",
+      "author": "António R.",
+      "role": "Diretor Comercial, Empresa Industrial"
+    }
+  },
+  {
+    "slug": "zappinscricoes",
+    "name": "ZappInscrições",
+    "tagline": "Inscrições institucionais sem comissões",
+    "headline": "Gestão de inscrições sem dar 10% a plataformas americanas",
+    "description": "Plataforma de gestão de eventos e inscrições para instituições públicas, académicas e corporativas. Pagamentos integrados, faturação certificada, 0% de comissão.",
+    "longDescription": "O ZappInscrições foi desenhado especificamente para instituições portuguesas que gerem formações, eventos e inscrições. Ao contrário de plataformas como Eventbrite (6-10% de comissão), não cobramos por inscrição. Inclui pagamentos nativos por Multibanco e MB Way, faturação certificada via Moloni, e gestão multi-departamento com permissões isoladas.",
+    "category": "Gestão Institucional",
+    "audience": "Instituições Públicas & Académicas",
+    "audienceDescription": "Câmaras municipais, universidades, IPSS, empresas e organizações que gerem inscrições em formações, eventos ou reservas de instalações.",
+    "externalUrl": "https://zappinscricoes.modulardigital.pt/",
+    "screenshot": "/uploads/products/zappinscricoes-screenshot.png",
+    "ctaText": "Solicitar Proposta",
+    "ctaSecondary": "Ver Casos de Uso",
+    "icon": "users",
+    "problem": {
+      "title": "Plataformas de eventos que ficam com o seu dinheiro",
+      "description": "A sua instituição organiza um congresso com 500 inscrições a 100€. Receita bruta: 50.000€. Mas usou Eventbrite. Comissão de 6-10%? Lá se vão 3.000€ a 5.000€. Para uma plataforma americana que nem emite fatura portuguesa. Agora multiplique por todos os eventos do ano. E as formações internas? E os workshops? Quanto está a perder?",
+      "painPoints": [
+        "Comissões de 6-10% em cada inscrição roubam margem",
+        "Plataformas internacionais não emitem faturação certificada AT",
+        "Pagamentos Multibanco e MB Way mal suportados ou inexistentes",
+        "Dados de participantes em servidores fora da UE",
+        "Gestão multi-departamento impossível ou complexa",
+        "Sem integração com sistemas institucionais existentes"
+      ]
+    },
+    "solution": {
+      "title": "A sua plataforma, zero comissões, 100% portuguesa",
+      "description": "O ZappInscrições instala-se na sua infraestrutura. Paga uma licença anual fixa - organize 10 ou 10.000 eventos, o custo é o mesmo. Cada euro de inscrição vai para a sua instituição. Multibanco e MB Way nativos, faturação certificada AT via Moloni, dados em Portugal, RGPD garantido."
+    },
+    "benefits": [
+      {
+        "title": "Zero Comissões",
+        "description": "100% do valor das inscrições fica na instituição. Licença anual fixa, eventos e inscrições ilimitados."
+      },
+      {
+        "title": "Pagamentos à Portuguesa",
+        "description": "Multibanco e MB Way nativos, não adaptações mal feitas. Referências geradas instantaneamente, reconciliação automática."
+      },
+      {
+        "title": "Faturação Certificada",
+        "description": "Integração Moloni com certificação AT. Faturas emitidas automaticamente, validação de NIF incluída."
+      },
+      {
+        "title": "Multi-Departamento",
+        "description": "Cada departamento gere os seus eventos. Permissões isoladas. Finanças vê tudo, secretariado vê o seu."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Universidades e Politécnicos",
+        "description": "Congressos científicos, workshops, cursos de verão, pós-graduações. Integração com sistemas académicos, gestão de créditos ECTS."
+      },
+      {
+        "title": "Câmaras Municipais",
+        "description": "Inscrições em atividades culturais, desportivas, formações para munícipes. Múltiplos departamentos, um sistema central."
+      },
+      {
+        "title": "IPSS e Misericórdias",
+        "description": "Gestão de quotas de sócios, inscrições em atividades, reservas de espaços. Relatórios para assembleias gerais."
+      },
+      {
+        "title": "Associações Profissionais",
+        "description": "Formação contínua obrigatória, conferências anuais, gestão de membros. Emissão de certificados automática."
+      },
+      {
+        "title": "Empresas (Formação Interna)",
+        "description": "Catálogo de formações internas, inscrições de colaboradores, tracking de participação, reporting para RH."
+      }
+    ],
+    "howItWorks": [
+      {
+        "step": "1",
+        "title": "Crie o Evento",
+        "description": "Defina título, datas, preço, vagas. Crie formulário personalizado com os campos que precisa."
+      },
+      {
+        "step": "2",
+        "title": "Publique",
+        "description": "Landing page automática ou embed no seu site. Partilhe link, as inscrições começam."
+      },
+      {
+        "step": "3",
+        "title": "Receba Pagamentos",
+        "description": "Participante escolhe Multibanco, MB Way, ou cartão. Pagamento confirmado automaticamente."
+      },
+      {
+        "step": "4",
+        "title": "Faturação Automática",
+        "description": "Fatura certificada emitida via Moloni no momento do pagamento. Enviada por email ao participante."
+      },
+      {
+        "step": "5",
+        "title": "Gestão de Participantes",
+        "description": "Lista de inscritos, check-in no dia, emissão de certificados, exportação para Excel ou API."
+      }
+    ],
+    "comparison": {
+      "title": "ZappInscrições vs Eventbrite & Outros",
+      "points": [
+        {
+          "vs": "Eventbrite",
+          "advantage": "0% comissão vs 6-10%. Faturação AT certificada. Multibanco/MB Way nativos. Dados em Portugal."
+        },
+        {
+          "vs": "Google Forms + Transferência",
+          "advantage": "Pagamentos integrados e automáticos. Faturação automática. Gestão profissional de participantes."
+        },
+        {
+          "vs": "Desenvolvimento Custom",
+          "advantage": "Produto pronto, testado, com suporte. Implementação em semanas, não meses. Muito mais barato."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Quanto poupa a minha instituição?",
+        "answer": "Se organiza eventos com 10.000€ em inscrições anuais, poupa 600€-1.000€ vs Eventbrite. Com 100.000€, poupa 6.000€-10.000€. A licença paga-se rapidamente."
+      },
+      {
+        "question": "Funciona para eventos gratuitos?",
+        "answer": "Claro. Eventos gratuitos não têm qualquer custo adicional. Ideal para workshops internos, sessões de esclarecimento, etc."
+      },
+      {
+        "question": "Como funciona a faturação certificada?",
+        "answer": "Integramos com Moloni (ou outro software certificado). Quando o pagamento é confirmado, a fatura é emitida automaticamente com todos os dados fiscais corretos."
+      },
+      {
+        "question": "Posso ter vários departamentos independentes?",
+        "answer": "Sim. Cada departamento tem o seu espaço, utilizadores, e eventos. Administração central vê tudo, finanças acede a relatórios consolidados."
+      },
+      {
+        "question": "E se precisar de funcionalidades específicas?",
+        "answer": "Desenvolvemos à medida. Integração com gestão académica, ERP, CRM, sistemas de controlo de acessos - personalizamos."
+      }
+    ],
+    "features": [
+      {
+        "title": "0% Comissão por Inscrição",
+        "description": "Retenha 100% das receitas - apenas licença anual fixa"
+      },
+      {
+        "title": "Pagamentos Portugueses",
+        "description": "Multibanco, MB Way, cartão e PayPal integrados nativamente"
+      },
+      {
+        "title": "Faturação Certificada",
+        "description": "Integração AT e Moloni com validação de NIF automática"
+      },
+      {
+        "title": "Multi-Departamento",
+        "description": "Permissões isoladas por equipa com controlo de acessos granular"
+      }
+    ],
+    "pricing": {
+      "type": "license",
+      "note": "Licença anual personalizada",
+      "highlight": "Zero comissões"
+    },
+    "testimonial": {
+      "quote": "No primeiro ano com ZappInscrições poupámos mais de 8.000€ em comissões. Isso pagou a licença e ainda sobrou para melhorar os eventos.",
+      "author": "Dra. Helena F.",
+      "role": "Diretora de Formação, Universidade"
+    }
+  }
+]

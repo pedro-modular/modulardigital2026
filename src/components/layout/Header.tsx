@@ -30,6 +30,16 @@ const navigation = [
   { label: 'Casos de Estudo', href: '/casos-de-estudo' },
   { label: 'Artigos', href: '/artigos' },
   {
+    label: 'Produtos',
+    href: '/produtos',
+    children: [
+      { label: 'ZappExpense', href: '/produtos/zappexpense' },
+      { label: 'ZappService', href: '/produtos/zappservice' },
+      { label: 'ZappPropostas', href: '/produtos/zapppropostas' },
+      { label: 'ZappInscrições', href: '/produtos/zappinscricoes' },
+    ],
+  },
+  {
     label: 'Ferramentas',
     href: '/ferramentas',
     children: [
