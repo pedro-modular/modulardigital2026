@@ -132,7 +132,7 @@ export async function submitContactForm(
 
     // Send email notification
     await resend.emails.send({
-      from: 'Modular Digital <contacto@modulardigital.pt>',
+      from: 'Modular Digital <hello@buildvoyage.com>',
       to: ['hello@modulardigital.pt'],
       replyTo: email,
       subject: sanitizeSubject(`Novo contacto: ${name}${organization ? ` - ${organization}` : ''}`),
@@ -157,7 +157,7 @@ export async function submitContactForm(
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: 'Modular Digital <contacto@modulardigital.pt>',
+      from: 'Modular Digital <hello@buildvoyage.com>',
       to: [email],
       subject: 'Recebemos o seu contacto - Modular Digital',
       html: `
