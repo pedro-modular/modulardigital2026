@@ -1,12 +1,6 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import { Header, Footer } from "@/components/layout"
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-})
 
 export const metadata: Metadata = {
   title: {
@@ -53,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

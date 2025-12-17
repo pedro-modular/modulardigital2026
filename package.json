@@ -9,12 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^1.4.0",
     "gray-matter": "^4.0.3",
     "next": "16.0.10",
     "next-mdx-remote": "^5.0.0",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "reading-time": "^1.5.0",
+    "resend": "^6.6.0",
     "turndown": "^7.2.2",
     "xml2js": "^0.6.2",
     "yaml": "^2.8.2"

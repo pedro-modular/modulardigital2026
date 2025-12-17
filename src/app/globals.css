@@ -7,8 +7,7 @@
 /* Lufga Font - Display/Headings */
 @font-face {
   font-family: 'Lufga';
-  src: url('/fonts/Lufga-Regular.woff2') format('woff2'),
-       url('/fonts/Lufga-Regular.woff') format('woff');
+  src: url('/fonts/Lufga-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,8 +15,7 @@
 
 @font-face {
   font-family: 'Lufga';
-  src: url('/fonts/Lufga-Medium.woff2') format('woff2'),
-       url('/fonts/Lufga-Medium.woff') format('woff');
+  src: url('/fonts/Lufga-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -25,8 +23,7 @@
 
 @font-face {
   font-family: 'Lufga';
-  src: url('/fonts/Lufga-SemiBold.woff2') format('woff2'),
-       url('/fonts/Lufga-SemiBold.woff') format('woff');
+  src: url('/fonts/Lufga-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -34,8 +31,7 @@
 
 @font-face {
   font-family: 'Lufga';
-  src: url('/fonts/Lufga-Bold.woff2') format('woff2'),
-       url('/fonts/Lufga-Bold.woff') format('woff');
+  src: url('/fonts/Lufga-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -215,9 +211,37 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: scale(1.5); opacity: 0; }
 }
 
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════════════════
    Animation Utilities
    ══════════════════════════════════════════════════════════════════════════ */
+
+.animate-slide-in-from-right {
+  animation: slide-in-from-right 0.3s var(--ease-out-expo) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s var(--ease-out-expo) forwards;
+}
 
 .animate-fade-in {
   animation: fade-in 0.8s var(--ease-out-expo) forwards;

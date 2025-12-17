@@ -56,7 +56,13 @@ export default function ArtigosPage() {
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-4xl font-bold text-white/20">M</span>
+                        <Image
+                          src="/uploads/2019/08/modular_icon_branco.png"
+                          alt="Modular Digital"
+                          width={60}
+                          height={60}
+                          className="opacity-20"
+                        />
                       </div>
                     )}
                   </div>

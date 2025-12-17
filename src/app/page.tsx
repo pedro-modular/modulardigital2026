@@ -306,9 +306,11 @@ export default function Home() {
                     <h3 className="mt-6 text-3xl font-bold text-white lg:text-4xl group-hover:text-[#e72f3f] transition-colors">
                       {featuredCase.title}
                     </h3>
-                    <p className="mt-4 text-lg text-white/70">
-                      {featuredCase.client}
-                    </p>
+                    {featuredCase.client !== featuredCase.title && (
+                      <p className="mt-4 text-lg text-white/70">
+                        {featuredCase.client}
+                      </p>
+                    )}
                   </div>
 
                   {featuredCase.results && featuredCase.results.length > 0 && (
@@ -376,13 +378,10 @@ export default function Home() {
                       <h3 className="mt-3 text-xl font-bold text-[#1a1a1a] group-hover:text-[#e72f3f] transition-colors">
                         {caseStudy.title}
                       </h3>
-                      <p className="mt-2 text-sm text-[#737373]">
-                        {caseStudy.client}
-                      </p>
-                      {caseStudy.results && caseStudy.results[0] && (
-                        <div className="mt-4 inline-block rounded-full bg-[#f0f0f0] px-4 py-2 text-sm font-medium text-[#1a1a1a]">
-                          {caseStudy.results[0].value}
-                        </div>
+                      {caseStudy.client !== caseStudy.title && (
+                        <p className="mt-2 text-sm text-[#737373]">
+                          {caseStudy.client}
+                        </p>
                       )}
                     </div>
                   </Link>
@@ -478,7 +477,13 @@ export default function Home() {
                         />
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-4xl font-bold text-white/20">M</span>
+                          <Image
+                            src="/uploads/2019/08/modular_icon_branco.png"
+                            alt="Modular Digital"
+                            width={60}
+                            height={60}
+                            className="opacity-20"
+                          />
                         </div>
                       )}
                     </div>
@@ -555,10 +560,14 @@ export default function Home() {
           </div>
 
           {/* Decorative element */}
-          <div className="absolute bottom-0 right-0 hidden lg:block">
-            <div className="text-[12rem] font-bold leading-none text-white/[0.03]">
-              M
-            </div>
+          <div className="absolute bottom-0 right-0 hidden lg:block opacity-[0.03]">
+            <Image
+              src="/uploads/2019/08/modular_icon_branco.png"
+              alt=""
+              width={300}
+              height={300}
+              aria-hidden="true"
+            />
           </div>
         </div>
       </section>
