@@ -15,6 +15,15 @@ const footerLinks = {
     { label: 'Setor Público', href: '/industrias/setor-publico' },
     { label: 'IPSS & Misericórdias', href: '/industrias/ipss' },
   ],
+  ferramentas: [
+    { label: 'Gerador Link WhatsApp', href: '/ferramentas/gerador-link-whatsapp' },
+    { label: 'Calculadora ROAS', href: '/ferramentas/calculadora-roas' },
+    { label: 'Gerador Links UTM', href: '/ferramentas/gerador-utm' },
+    { label: 'Preview Meta Tags OG', href: '/ferramentas/og-meta-preview' },
+    { label: 'Gerador QR Code', href: '/ferramentas/gerador-qr-code' },
+    { label: 'Conversor WebP', href: '/ferramentas/conversor-webp' },
+    { label: 'Ver Todas →', href: '/ferramentas' },
+  ],
   empresa: [
     { label: 'Sobre Nós', href: '/sobre' },
     { label: 'Casos de Estudo', href: '/casos-de-estudo' },
@@ -66,6 +75,8 @@ export function Footer() {
             <div className="mt-8 space-y-3">
               <a
                 href="tel:+351914663553"
+                data-umami-event="phone_click"
+                data-umami-event-location="footer"
                 className="flex items-center gap-3 text-sm text-white/80 transition-colors hover:text-white"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10">
@@ -77,6 +88,8 @@ export function Footer() {
               </a>
               <a
                 href="mailto:hello@modulardigital.pt"
+                data-umami-event="email_click"
+                data-umami-event-location="footer"
                 className="flex items-center gap-3 text-sm text-white/80 transition-colors hover:text-white"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10">
@@ -94,6 +107,8 @@ export function Footer() {
                 href="https://www.linkedin.com/company/modulardigital"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="social_click"
+                data-umami-event-network="linkedin"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-[#e72f3f]"
               >
                 <span className="sr-only">LinkedIn</span>
@@ -105,6 +120,8 @@ export function Footer() {
                 href="https://www.facebook.com/modulardigital"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="social_click"
+                data-umami-event-network="facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-[#e72f3f]"
               >
                 <span className="sr-only">Facebook</span>
@@ -116,7 +133,7 @@ export function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-9">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-9 lg:grid-cols-5">
             {/* Serviços */}
             <div>
               <h3 className="text-xs font-bold uppercase tracking-widest text-white/40">Serviços</h3>
@@ -139,6 +156,23 @@ export function Footer() {
               <h3 className="text-xs font-bold uppercase tracking-widest text-white/40">Indústrias</h3>
               <ul className="mt-6 space-y-4">
                 {footerLinks.industrias.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/70 transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Ferramentas */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-white/40">Ferramentas</h3>
+              <ul className="mt-6 space-y-4">
+                {footerLinks.ferramentas.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

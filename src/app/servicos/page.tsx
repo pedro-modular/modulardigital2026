@@ -2,8 +2,17 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Serviços',
-  description: 'Serviços de consultoria digital, capacitação técnica e implementação especializada para instituições.',
+  title: 'Serviços de Web Design, Desenvolvimento e SEO | Modular Digital',
+  description: 'Serviços profissionais de web design, desenvolvimento web, SEO, e-commerce e consultoria digital para instituições em Portugal.',
+  alternates: {
+    canonical: 'https://modulardigital.pt/servicos',
+  },
+  openGraph: {
+    title: 'Serviços de Web Design, Desenvolvimento e SEO',
+    description: 'Serviços profissionais de web design, desenvolvimento web, SEO, e-commerce e consultoria digital para instituições em Portugal.',
+    url: 'https://modulardigital.pt/servicos',
+    type: 'website',
+  },
 }
 
 const services = [

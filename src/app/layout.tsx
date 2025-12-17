@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { Header, Footer } from "@/components/layout"
+import { UmamiAnalytics } from "@/components/analytics"
 
 export const metadata: Metadata = {
   title: {
@@ -48,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className="font-sans antialiased" suppressHydrationWarning>
+        <UmamiAnalytics />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

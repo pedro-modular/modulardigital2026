@@ -1,7 +1,23 @@
+import { Metadata } from 'next'
 import Link from "next/link"
 import Image from "next/image"
 import { getAllCases, getAllPosts } from "@/lib/content"
 import { formatDateShort } from "@/lib/utils"
+
+export const metadata: Metadata = {
+  title: 'Modular Digital | Agência de Web Design e Desenvolvimento em Portugal',
+  description: 'Agência digital especializada em web design, desenvolvimento web, SEO e consultoria digital para instituições de ensino, saúde e setor público em Portugal.',
+  keywords: ['agência digital portugal', 'web design', 'desenvolvimento web', 'SEO portugal', 'consultoria digital'],
+  alternates: {
+    canonical: 'https://modulardigital.pt',
+  },
+  openGraph: {
+    title: 'Modular Digital | Agência de Web Design e Desenvolvimento',
+    description: 'Consultoria e implementação digital para instituições que exigem autonomia e resultados sustentáveis.',
+    url: 'https://modulardigital.pt',
+    type: 'website',
+  },
+}
 
 const clients = [
   { name: "Universidade de Lisboa", logo: "/uploads/2024/06/u-lisboa-1.png", href: "https://www.ulisboa.pt/" },

@@ -364,11 +364,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${industry.title} | Modular Digital`,
+    title: `Soluções Digitais para ${industry.title} | Modular Digital`,
     description: industry.description,
+    alternates: {
+      canonical: `https://modulardigital.pt/industrias/${slug}`,
+    },
     openGraph: {
-      title: `${industry.title} | Modular Digital`,
+      title: `Soluções Digitais para ${industry.title} | Modular Digital`,
       description: industry.description,
+      url: `https://modulardigital.pt/industrias/${slug}`,
       type: 'website',
     },
   }

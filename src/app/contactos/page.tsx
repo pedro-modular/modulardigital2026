@@ -2,8 +2,17 @@ import { Metadata } from 'next'
 import { ContactForm } from './ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contactos',
-  description: 'Entre em contacto connosco para uma consultoria estratégica gratuita. Transformamos a presença digital da sua organização.',
+  title: 'Contactos | Agende uma Consultoria Gratuita | Modular Digital',
+  description: 'Entre em contacto para uma consultoria estratégica gratuita. Ligue +351 914 663 553 ou envie mensagem. Resposta em 24h.',
+  alternates: {
+    canonical: 'https://modulardigital.pt/contactos',
+  },
+  openGraph: {
+    title: 'Contactos | Agende uma Consultoria Gratuita',
+    description: 'Entre em contacto para uma consultoria estratégica gratuita. Transformamos a presença digital da sua organização.',
+    url: 'https://modulardigital.pt/contactos',
+    type: 'website',
+  },
 }
 
 export default function ContactosPage() {
@@ -50,6 +59,8 @@ export default function ContactosPage() {
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:gap-8 will-animate animate-slide-up delay-300">
                 <a
                   href="tel:+351914663553"
+                  data-umami-event="phone_click"
+                  data-umami-event-location="contact_hero"
                   className="group flex items-center gap-3 text-white/80 hover:text-white transition-colors"
                 >
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-[#e72f3f] transition-all group-hover:bg-[#e72f3f] group-hover:text-white">
@@ -61,6 +72,8 @@ export default function ContactosPage() {
                 </a>
                 <a
                   href="mailto:hello@modulardigital.pt"
+                  data-umami-event="email_click"
+                  data-umami-event-location="contact_hero"
                   className="group flex items-center gap-3 text-white/80 hover:text-white transition-colors"
                 >
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-[#e72f3f] transition-all group-hover:bg-[#e72f3f] group-hover:text-white">
@@ -175,6 +188,8 @@ export default function ContactosPage() {
                       <h3 className="font-bold text-[#1a1a1a]">Telefone</h3>
                       <a
                         href="tel:+351914663553"
+                        data-umami-event="phone_click"
+                        data-umami-event-location="contact_card"
                         className="mt-2 block text-lg font-medium text-[#1a1a1a] hover:text-[#e72f3f] transition-colors"
                       >
                         +351 914 663 553
@@ -198,6 +213,8 @@ export default function ContactosPage() {
                       <h3 className="font-bold text-[#1a1a1a]">Email</h3>
                       <a
                         href="mailto:hello@modulardigital.pt"
+                        data-umami-event="email_click"
+                        data-umami-event-location="contact_card"
                         className="mt-2 block text-lg font-medium text-[#1a1a1a] hover:text-[#e72f3f] transition-colors"
                       >
                         hello@modulardigital.pt
@@ -217,6 +234,8 @@ export default function ContactosPage() {
                       href="https://www.linkedin.com/company/modulardigital"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-umami-event="social_click"
+                      data-umami-event-network="linkedin"
                       className="group flex h-12 w-12 items-center justify-center rounded-xl bg-[#fafafa] text-[#737373] transition-all hover:bg-[#0077b5] hover:text-white"
                       aria-label="LinkedIn"
                     >
@@ -228,6 +247,8 @@ export default function ContactosPage() {
                       href="https://www.facebook.com/modulardigital"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-umami-event="social_click"
+                      data-umami-event-network="facebook"
                       className="group flex h-12 w-12 items-center justify-center rounded-xl bg-[#fafafa] text-[#737373] transition-all hover:bg-[#1877f2] hover:text-white"
                       aria-label="Facebook"
                     >
@@ -239,6 +260,8 @@ export default function ContactosPage() {
                       href="https://www.instagram.com/modulardigital"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-umami-event="social_click"
+                      data-umami-event-network="instagram"
                       className="group flex h-12 w-12 items-center justify-center rounded-xl bg-[#fafafa] text-[#737373] transition-all hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#e6683c] hover:to-[#bc1888] hover:text-white"
                       aria-label="Instagram"
                     >
@@ -372,6 +395,8 @@ export default function ContactosPage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row">
               <a
                 href="#name"
+                data-umami-event="cta_click"
+                data-umami-event-cta="contact_footer_form"
                 className="magnetic group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-medium text-[#1a1a1a] transition-all hover:bg-[#f0f0f0]"
               >
                 <span>Preencher Formulário</span>
@@ -384,6 +409,8 @@ export default function ContactosPage() {
               <span className="text-white/50">ou</span>
               <a
                 href="tel:+351914663553"
+                data-umami-event="phone_click"
+                data-umami-event-location="contact_footer"
                 className="text-sm font-medium text-white hover:text-[#e72f3f] transition-colors"
               >
                 Ligue +351 914 663 553

@@ -115,24 +115,24 @@ const services: Record<string, {
   'desenvolvimento-web': {
     title: 'Desenvolvimento Web',
     tagline: 'Tecnologia que trabalha para si',
-    description: 'Websites e plataformas construídos para durar, não para criar dependência.',
-    heroText: 'Um website não é um projeto - é uma ferramenta de trabalho. Construímos plataformas robustas, seguras e fáceis de gerir. Usamos tecnologias abertas para que nunca fique preso a um fornecedor.',
+    description: 'Websites e aplicações web construídos para durar, não para criar dependência.',
+    heroText: 'Um website não é um projeto - é uma ferramenta de trabalho. Construímos plataformas robustas, seguras e fáceis de gerir. Especializamo-nos em Laravel e PHP para aplicações que precisam de escalar.',
     whatWeDo: [
       {
         title: 'Websites Institucionais',
-        description: 'Sites que representam a sua organização com profissionalismo. Rápidos, acessíveis e otimizados para motores de busca.',
+        description: 'Sites que representam a sua organização com profissionalismo. Rápidos, acessíveis e otimizados para motores de busca. WordPress ou Statamic para gestão autónoma.',
       },
       {
-        title: 'Plataformas Personalizadas',
-        description: 'Quando as soluções standard não chegam, construímos à medida. Portais de cliente, sistemas de gestão, intranets.',
+        title: 'Aplicações Web Laravel',
+        description: 'Sistemas à medida com Laravel, a framework PHP mais robusta. Portais de cliente, sistemas de gestão, intranets, plataformas SaaS.',
       },
       {
-        title: 'Implementação CMS',
-        description: 'WordPress, Statamic ou outras plataformas. Configuramos para que a sua equipa possa gerir conteúdos sem conhecimentos técnicos.',
+        title: 'APIs e Integrações',
+        description: 'Conectamos sistemas, automatizamos processos e construímos APIs RESTful. Integração com ERPs, CRMs e serviços externos.',
       },
       {
         title: 'Migrações e Redesign',
-        description: 'Atualizamos sites antigos sem perder SEO nem conteúdo. Redesenhamos mantendo o que funciona, melhorando o que não funciona.',
+        description: 'Atualizamos sites e aplicações antigas sem perder dados nem funcionalidades. Modernizamos mantendo o que funciona.',
       },
     ],
     process: [
@@ -147,8 +147,8 @@ const services: Record<string, {
       { stat: '24h', label: 'Tempo de resposta a incidentes' },
     ],
     faq: [
-      { question: 'Que tecnologias usam?', answer: 'WordPress e Statamic para CMS. Next.js para aplicações. Sempre tecnologias abertas e bem documentadas.' },
-      { question: 'Quanto custa um website?', answer: 'Depende da complexidade. Sites institucionais começam nos 3.000€. Plataformas personalizadas são orçamentadas caso a caso.' },
+      { question: 'Que tecnologias usam?', answer: 'Laravel e PHP para aplicações web robustas. WordPress e Statamic para CMS. Sempre tecnologias abertas, bem documentadas e com comunidade ativa.' },
+      { question: 'Quanto custa um website?', answer: 'Websites institucionais começam nos 2.500€. Aplicações web personalizadas a partir de 5.000€, dependendo da complexidade.' },
       { question: 'Fazem manutenção?', answer: 'Oferecemos planos de manutenção, mas desenhamos para que possam gerir internamente. A escolha é vossa.' },
     ],
   },
@@ -289,8 +289,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: service.title,
+    title: `${service.title} | Modular Digital`,
     description: service.description,
+    alternates: {
+      canonical: `https://modulardigital.pt/servicos/${slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | Modular Digital`,
+      description: service.description,
+      url: `https://modulardigital.pt/servicos/${slug}`,
+      type: 'website',
+    },
   }
 }
 

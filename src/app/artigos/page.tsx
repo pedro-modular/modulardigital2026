@@ -5,8 +5,17 @@ import { getAllPosts } from '@/lib/content'
 import { formatDate } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Artigos',
-  description: 'Artigos sobre web design, desenvolvimento, SEO e transformação digital para instituições.',
+  title: 'Artigos sobre SEO, Web Design e Marketing Digital | Modular Digital',
+  description: 'Artigos, guias e insights sobre SEO, web design, desenvolvimento web, e-commerce e transformação digital para instituições em Portugal.',
+  alternates: {
+    canonical: 'https://modulardigital.pt/artigos',
+  },
+  openGraph: {
+    title: 'Artigos sobre SEO, Web Design e Marketing Digital',
+    description: 'Artigos, guias e insights sobre SEO, web design, desenvolvimento web, e-commerce e transformação digital.',
+    url: 'https://modulardigital.pt/artigos',
+    type: 'website',
+  },
 }
 
 export default function ArtigosPage() {

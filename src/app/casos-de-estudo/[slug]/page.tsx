@@ -59,13 +59,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Caso de estudo não encontrado' }
   }
 
+  const title = `${caseStudy.title} | Caso de Estudo | Modular Digital`
+  const description = `Caso de estudo: ${caseStudy.client} - ${caseStudy.industry}. Conheça os resultados e soluções implementadas.`
+
   return {
-    title: caseStudy.title,
-    description: `Caso de estudo: ${caseStudy.client} - ${caseStudy.industry}`,
+    title,
+    description,
+    alternates: {
+      canonical: `https://modulardigital.pt/casos-de-estudo/${slug}`,
+    },
     openGraph: {
       title: caseStudy.title,
       description: `Projeto ${caseStudy.title} para ${caseStudy.client}`,
+      url: `https://modulardigital.pt/casos-de-estudo/${slug}`,
       type: 'article',
+      ...(caseStudy.featured_image && { images: [caseStudy.featured_image] }),
     },
   }
 }

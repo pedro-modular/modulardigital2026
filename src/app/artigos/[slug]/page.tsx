@@ -40,15 +40,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Artigo não encontrado' }
   }
 
+  const title = post.seo?.title || `${post.title} | Modular Digital`
+  const description = post.seo?.description || post.description
+
   return {
-    title: post.seo?.title || post.title,
-    description: post.seo?.description || post.description,
+    title,
+    description,
+    alternates: {
+      canonical: `https://modulardigital.pt/artigos/${slug}`,
+    },
     openGraph: {
       title: post.title,
-      description: post.description,
+      description,
+      url: `https://modulardigital.pt/artigos/${slug}`,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      ...(post.featured_image && { images: [post.featured_image] }),
     },
   }
 }

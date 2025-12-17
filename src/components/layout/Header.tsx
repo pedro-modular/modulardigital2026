@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { umamiEvents } from '@/components/analytics'
 
 const navigation = [
   { label: 'Sobre', href: '/sobre' },
@@ -28,6 +29,22 @@ const navigation = [
   },
   { label: 'Casos de Estudo', href: '/casos-de-estudo' },
   { label: 'Artigos', href: '/artigos' },
+  {
+    label: 'Ferramentas',
+    href: '/ferramentas',
+    children: [
+      { label: 'Gerador Link WhatsApp', href: '/ferramentas/gerador-link-whatsapp' },
+      { label: 'Calculadora ROAS', href: '/ferramentas/calculadora-roas' },
+      { label: 'Gerador Links UTM', href: '/ferramentas/gerador-utm' },
+      { label: 'Preview Meta Tags OG', href: '/ferramentas/og-meta-preview' },
+      { label: 'Gerador QR Code', href: '/ferramentas/gerador-qr-code' },
+      { label: 'Gerador Schema JSON-LD', href: '/ferramentas/gerador-schema-local-business' },
+      { label: 'Checklist Acessibilidade', href: '/ferramentas/checklist-acessibilidade' },
+      { label: 'Conversor WebP', href: '/ferramentas/conversor-webp' },
+      { label: 'Redimensionador Imagens', href: '/ferramentas/redimensionador-imagens' },
+      { label: 'Política de Privacidade', href: '/ferramentas/gerador-politica-privacidade' },
+    ],
+  },
   { label: 'Contactos', href: '/contactos' },
 ]
 
@@ -108,6 +125,7 @@ export function Header() {
           <div className="hidden lg:block">
             <Link
               href="/contactos"
+              onClick={() => umamiEvents.ctaClick('header_cta_desktop')}
               className="magnetic group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[#1a1a1a] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-black"
             >
               <span>Agendar Consultoria</span>
@@ -219,12 +237,16 @@ export function Header() {
                 <Link
                   href="/contactos"
                   className="block w-full rounded-full bg-[#1a1a1a] py-4 text-center text-sm font-medium text-white transition-all hover:bg-black active:scale-[0.98]"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    umamiEvents.ctaClick('header_cta_mobile')
+                    setMobileMenuOpen(false)
+                  }}
                 >
                   Agendar Consultoria Estratégica →
                 </Link>
                 <a
                   href="tel:+351914663553"
+                  onClick={() => umamiEvents.phoneClick()}
                   className="flex items-center justify-center gap-2 text-sm text-[#737373] hover:text-[#1a1a1a] transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">

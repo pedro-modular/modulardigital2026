@@ -4,8 +4,17 @@ import Image from 'next/image'
 import { getAllCases } from '@/lib/content'
 
 export const metadata: Metadata = {
-  title: 'Casos de Estudo',
-  description: 'Projetos de sucesso em web design, desenvolvimento e transformação digital para instituições.',
+  title: 'Casos de Estudo e Portfólio | Modular Digital',
+  description: 'Casos de estudo e portfólio de projetos de web design, desenvolvimento web e transformação digital para universidades, escolas, clínicas e setor público.',
+  alternates: {
+    canonical: 'https://modulardigital.pt/casos-de-estudo',
+  },
+  openGraph: {
+    title: 'Casos de Estudo e Portfólio | Modular Digital',
+    description: 'Projetos de sucesso em web design, desenvolvimento e transformação digital para instituições.',
+    url: 'https://modulardigital.pt/casos-de-estudo',
+    type: 'website',
+  },
 }
 
 export default function CasosDeEstudoPage() {

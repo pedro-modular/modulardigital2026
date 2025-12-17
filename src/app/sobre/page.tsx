@@ -2,8 +2,17 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Sobre Nós',
-  description: 'Conheça a Modular Digital - consultoria e implementação digital especializada para instituições.',
+  title: 'Sobre a Modular Digital | Agência Web em Portugal',
+  description: 'Conheça a Modular Digital - agência de web design e desenvolvimento especializada em instituições de ensino, saúde e setor público. 10+ anos de experiência em Portugal.',
+  alternates: {
+    canonical: 'https://modulardigital.pt/sobre',
+  },
+  openGraph: {
+    title: 'Sobre a Modular Digital | Agência Web em Portugal',
+    description: 'Consultoria e implementação digital especializada para instituições. 10+ anos de experiência.',
+    url: 'https://modulardigital.pt/sobre',
+    type: 'website',
+  },
 }
 
 const values = [

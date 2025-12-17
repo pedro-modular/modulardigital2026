@@ -1,9 +1,10 @@
 'use client'
 
-import { useActionState, useState } from 'react'
+import { useActionState, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Turnstile } from '@marsidev/react-turnstile'
 import { submitContactForm, type ContactFormState } from './actions'
+import { umamiEvents } from '@/components/analytics'
 
 const initialState: ContactFormState = {
   success: false,
@@ -13,6 +14,22 @@ const initialState: ContactFormState = {
 export function ContactForm() {
   const [state, formAction, isPending] = useActionState(submitContactForm, initialState)
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
+  const [hasTrackedStart, setHasTrackedStart] = useState(false)
+
+  // Track form submission success
+  useEffect(() => {
+    if (state.success) {
+      umamiEvents.formSubmit('contact')
+    }
+  }, [state.success])
+
+  // Track form start when user focuses on first field
+  const handleFormStart = () => {
+    if (!hasTrackedStart) {
+      umamiEvents.formStart('contact')
+      setHasTrackedStart(true)
+    }
+  }
 
   if (state.success) {
     return (
@@ -55,6 +72,7 @@ export function ContactForm() {
             id="name"
             name="name"
             required
+            onFocus={handleFormStart}
             className={`w-full border-0 border-b-2 bg-transparent px-0 py-3 text-[#1a1a1a] placeholder-[#a3a3a3] transition-all focus:outline-none focus:ring-0 ${
               state.errors?.name ? 'border-red-500 focus:border-red-500' : 'border-[#e5e5e5] focus:border-[#e72f3f]'
             }`}
