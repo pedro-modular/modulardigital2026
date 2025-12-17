@@ -5,6 +5,26 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllCases, getCaseBySlug } from '@/lib/content'
 
+// Map service names to their corresponding service page slugs
+const serviceToSlug: Record<string, string> = {
+  'Web Development': 'desenvolvimento-web',
+  'Consultoria Digital': 'consultoria-digital',
+  'Capacitação': 'capacitacao-tecnica',
+  'SEO': 'seo',
+  'E-commerce': 'ecommerce',
+  'UX/UI Design': 'web-design',
+  'Shopify': 'ecommerce',
+  'Sistema de Gestão': 'desenvolvimento-web',
+  'Sistema de Pagamentos': 'desenvolvimento-web',
+  'Migração de Dados': 'desenvolvimento-web',
+  'Integração ERP': 'desenvolvimento-web',
+  'Integração': 'desenvolvimento-web',
+}
+
+function getServiceSlug(serviceName: string): string | null {
+  return serviceToSlug[serviceName] || null
+}
+
 const mdxComponents = {
   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
     <span className="block my-8">
@@ -99,14 +119,25 @@ export default async function CaseStudyPage({ params }: PageProps) {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                {caseStudy.services.map((service) => (
-                  <span
-                    key={service}
-                    className="rounded-full border border-gray-600 px-4 py-2 text-sm text-gray-300"
-                  >
-                    {service}
-                  </span>
-                ))}
+                {caseStudy.services.map((service) => {
+                  const slug = getServiceSlug(service)
+                  return slug ? (
+                    <Link
+                      key={service}
+                      href={`/servicos/${slug}`}
+                      className="rounded-full border border-gray-600 px-4 py-2 text-sm text-gray-300 transition-colors hover:border-white hover:text-white"
+                    >
+                      {service}
+                    </Link>
+                  ) : (
+                    <span
+                      key={service}
+                      className="rounded-full border border-gray-600 px-4 py-2 text-sm text-gray-300"
+                    >
+                      {service}
+                    </span>
+                  )
+                })}
               </div>
             </div>
 
@@ -146,7 +177,23 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-[#6b7280]">Serviços</p>
-              <p className="mt-2 text-lg font-medium text-[#32373c]">{caseStudy.services.join(', ')}</p>
+              <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
+                {caseStudy.services.map((service, i) => {
+                  const slug = getServiceSlug(service)
+                  return (
+                    <span key={service} className="text-lg font-medium text-[#32373c]">
+                      {slug ? (
+                        <Link href={`/servicos/${slug}`} className="hover:text-[#e72f3f]">
+                          {service}
+                        </Link>
+                      ) : (
+                        service
+                      )}
+                      {i < caseStudy.services.length - 1 ? ',' : ''}
+                    </span>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -205,14 +252,25 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     Serviços Utilizados
                   </h3>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {caseStudy.services.map((service) => (
-                      <span
-                        key={service}
-                        className="rounded-full bg-[#f8f9fa] px-3 py-1 text-sm text-[#32373c]"
-                      >
-                        {service}
-                      </span>
-                    ))}
+                    {caseStudy.services.map((service) => {
+                      const slug = getServiceSlug(service)
+                      return slug ? (
+                        <Link
+                          key={service}
+                          href={`/servicos/${slug}`}
+                          className="rounded-full bg-[#f8f9fa] px-3 py-1 text-sm text-[#32373c] transition-colors hover:bg-[#e72f3f] hover:text-white"
+                        >
+                          {service}
+                        </Link>
+                      ) : (
+                        <span
+                          key={service}
+                          className="rounded-full bg-[#f8f9fa] px-3 py-1 text-sm text-[#32373c]"
+                        >
+                          {service}
+                        </span>
+                      )
+                    })}
                   </div>
                 </div>
               </div>
